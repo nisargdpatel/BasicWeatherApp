@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:hapticFeedbackEnabled="false"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="427dp"
+        android:layout_height="500dp"
+        android:contentDescription="@string/main_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/weather" />
+
+    <TextView
+        android:id="@+id/titleBar"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:background="#76FF03"
+        android:gravity="center"
+        android:text="@string/title_bar"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:fontFamily="serif-monospace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginRight="3dp"-->
+<!--        android:layout_weight=".28"-->
+<!--        android:orientation="horizontal">-->
+
+<!--&lt;!&ndash;        <ImageView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_alignParentRight="true"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_centerVertical="true"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:src="@mipmap/drop" />&ndash;&gt;-->
+
+<!--    </RelativeLayout>-->
+
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="25dp"
+        android:background="#258558"
+        android:gravity="center"
+        android:shadowColor="#0C0101"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:text="@string/search"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:typeface="monospace"
+        app:layout_constraintBottom_toBottomOf="@+id/cityName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.741"
+        app:layout_constraintStart_toEndOf="@+id/cityName"
+        app:layout_constraintTop_toBottomOf="@+id/titleBar"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Spinner
+        android:id="@+id/cityName"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:dropDownSelector="@android:color/background_light"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:popupBackground="#258558"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleBar" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
